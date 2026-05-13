@@ -1,0 +1,24 @@
+{
+  "name": "@evalops/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "cli": "tsx src/cli.ts",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@evalops/core": "0.1.0",
+    "@evalops/db": "0.1.0",
+    "bullmq": "^5.70.0",
+    "drizzle-orm": "^0.45.0",
+    "ioredis": "^5.8.0",
+    "tsx": "^4.20.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}

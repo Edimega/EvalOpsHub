@@ -1,0 +1,34 @@
+{
+  "name": "evalops-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @evalops/web",
+    "worker:dev": "npm run dev -w @evalops/worker",
+    "build": "npm run build -ws --if-present",
+    "lint": "npm run lint -ws --if-present",
+    "typecheck": "npm run typecheck -ws --if-present",
+    "test": "vitest run",
+    "db:migrate": "npm run db:migrate -w @evalops/db",
+    "evalops": "npm run cli -w @evalops/worker --"
+  },
+  "overrides": {
+    "next@16.2.6": {
+      "postcss": "8.5.14"
+    },
+    "postcss": "^8.5.10"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.0",
+    "eslint-config-next": "^16.2.6",
+    "@types/node": "^24.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}
